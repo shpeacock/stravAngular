@@ -15,8 +15,10 @@ export class MestuffComponent implements OnInit {
 
   getShit(){
     console.log('yeah you pressed dat button');
-    this.stravaService.getDatData()
-    // .then((response) => {console.log(response)})
+    this.stravaService.getDatData().subscribe((response) => {
+      console.log(response);
+      this.myData = response;
+    })
   }
 
 }
