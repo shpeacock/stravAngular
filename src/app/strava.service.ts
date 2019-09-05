@@ -12,8 +12,13 @@ export class StravaService {
 
   getDatData(){
     return this.fuckenThing.get(
-      `https://www.strava.com/api/v3/athletes/6147470/stats?access_token=a56ef6db4f9772d39ca0496ea2f8818b2763e2c5`
+      `https://www.strava.com/api/v3/athletes/6147470/stats?access_token=dc5f908475640224a0df8f1ae820d261d3a038eb`
       ).pipe(map(response => response)).toPromise(); 
   }
   
+  getClubBoard(){
+    return this.fuckenThing.get(
+      `https://www.strava.com/api/v3/clubs/51419/members?access_token=dc5f908475640224a0df8f1ae820d261d3a038eb`
+    ).pipe(map(response => response)).toPromise();
+  }
 }

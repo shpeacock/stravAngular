@@ -1,0 +1,9 @@
+<button (click)="getLeaders()">Get Leaders</button>
+<ul>
+    <li *ngFor="let member of leaders">
+        <p>
+            {{member.firstname}}
+        </p>
+    </li>
+</ul>
+{{leaders | json}}

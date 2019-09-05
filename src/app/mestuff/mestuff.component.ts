@@ -16,7 +16,7 @@ export class MestuffComponent implements OnInit {
   constructor(private stravaService: StravaService) { }
 
   ngOnInit() {
-    this.getShit();
+ 
   }
 
   getShit() {
@@ -24,7 +24,7 @@ export class MestuffComponent implements OnInit {
       this.myData = response; 
       this.swimTotal = response.ytd_swim_totals.distance;
       this.runTotal = response.ytd_run_totals.distance;
-      this.bikeTotal = response.ytd_bike_totals.distance;
+      // this.bikeTotal = response.ytd_bike_totals.distance;
     })
   }
 
