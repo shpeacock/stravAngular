@@ -4,10 +4,10 @@
 <div *ngIf=(myData)>
     Here it is sucka!
     <h3>Swim</h3>
-    <p>{{myData.ytd_swim_totals.distance | number}} Yards</p>
+    <p>{{swimTotal}} Yards</p>
     <h3>Bike</h3>
-    <p>{{myData.ytd_ride_totals.distance | number}} Miles</p>
+    <p>{{bikeTotal}} Miles</p>
     <h3>Run</h3>
-    <p>{{myData.ytd_run_totals.distance | number}} Miles</p>
+    <p>{{runTotal}} Miles</p>
 </div>
 {{myData | json}}
