@@ -8,19 +8,17 @@ import {StravaService } from '../strava.service';
 })
 export class MestuffComponent implements OnInit {
   myData: {};
-  swimData: {};
-  bikeData: {};
-  runData: {};
 
   constructor(private stravaService: StravaService) { }
 
   ngOnInit() {
   }
 
-  getShit(){
+  getShit() {
     this.stravaService.getDatData().then((response) => {
       this.myData = response;
     })
+    .catch(err => {console.log(err)});
   }
 
 }
