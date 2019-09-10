@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule} from '@angular/common/http';
+import {MatListModule} from '@angular/material/list'
 
 import { AppComponent } from './app.component';
 import { FinishlistComponent } from './finishlist/finishlist.component';
@@ -10,6 +11,7 @@ import { ClubComponent } from './club/club.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AbparkComponent } from './abpark/abpark.component';
 import { SegmentComponent } from './abpark/segment/segment.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,8 +27,12 @@ import { SegmentComponent } from './abpark/segment/segment.component';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
+    MatListModule,
   ],
-  providers: [],
+  providers: [
+
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
